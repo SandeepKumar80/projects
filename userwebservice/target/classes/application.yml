@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /userWebService
+document:
+  contact-email: "sandeepkumar300180@hotmail.com"
+spring:
+  datasource:
+     url: jdbc:oracle:thin:@//<host>:<port>/<servicename>
+     username: user
+     password: password
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+     hikari:
+       connection-test-query: select 1 from dual
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
